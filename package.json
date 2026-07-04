@@ -4,7 +4,10 @@
   "description": "Neuralwatt OpenAI-compatible provider for oh-my-pi",
   "type": "module",
   "main": "./extension.ts",
-  "files": ["extension.ts", "README.md", "LICENSE"],
+  "files": ["extension.ts", "README.md", "LICENSE", "test"],
+  "scripts": {
+    "test": "bun test"
+  },
   "keywords": ["omp", "omp-extension", "omp-plugin", "neuralwatt", "ai", "llm"],
   "omp": {
     "extensions": ["./extension.ts"]
