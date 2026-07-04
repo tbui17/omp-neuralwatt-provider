@@ -1,0 +1,21 @@
+{
+  "name": "@tbui17/omp-neuralwatt-provider",
+  "version": "0.1.0",
+  "description": "Neuralwatt OpenAI-compatible provider for oh-my-pi",
+  "type": "module",
+  "main": "./extension.ts",
+  "files": ["extension.ts", "README.md", "LICENSE"],
+  "keywords": ["omp", "omp-extension", "omp-plugin", "neuralwatt", "ai", "llm"],
+  "omp": {
+    "extensions": ["./extension.ts"]
+  },
+  "engines": {
+    "bun": ">=1.3.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "github:tbui17/omp-neuralwatt-provider"
+  },
+  "author": "tbui17"
+}
