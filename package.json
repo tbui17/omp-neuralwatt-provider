@@ -4,7 +4,7 @@
   "description": "Neuralwatt OpenAI-compatible provider for oh-my-pi",
   "type": "module",
   "main": "./extension.ts",
-  "files": ["extension.ts", "README.md", "LICENSE", "test"],
+  "files": ["extension.ts", "README.md", "LICENSE"],
   "scripts": {
     "test": "bun test"
   },
