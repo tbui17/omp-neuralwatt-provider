@@ -2,6 +2,8 @@
 
 Neuralwatt OpenAI-compatible provider plugin for [oh-my-pi](https://github.com/can1357/oh-my-pi).
 
+[![](https://img.shields.io/npm/v/@tbui17/omp-neuralwatt-provider.svg)](https://www.npmjs.com/package/@tbui17/omp-neuralwatt-provider)
+
 ## About Neuralwatt
 
 [Neuralwatt](https://www.neuralwatt.com) is an energy-optimized AI inference cloud. Its API is OpenAI-compatible and accessible at `https://api.neuralwatt.com/v1`, hosting frontier models from GLM (ZhipuAI), Kimi (MoonshotAI), and Qwen.
