@@ -29,5 +29,5 @@ describe.skipIf(!NEURALWATT_API_KEY)("neuralwatt integration", () => {
 		const content = data.choices[0]?.message?.content;
 		expect(typeof content).toBe("string");
 		expect(content!.length).toBeGreaterThan(0);
-	});
+	}, { timeout: 30000 });
 });
