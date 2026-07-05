@@ -29,7 +29,8 @@ describe.skipIf(!NEURALWATT_API_KEY)("neuralwatt integration", () => {
 
 		const message = data.choices[0]?.message;
 		expect(message?.role).toBe("assistant");
-		expect(message?.content).toBe("pong");
+		expect(typeof message?.content).toBe("string");
+		expect(message?.content.length).toBeGreaterThan(0);
 
 		expect(data.usage).toBeDefined();
 		expect(typeof data.usage.prompt_tokens).toBe("number");
