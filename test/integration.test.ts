@@ -3,10 +3,7 @@ import { describe, test, expect } from "bun:test";
 const NEURALWATT_API_KEY = process.env.NEURALWATT_API_KEY;
 const BASE_URL = "https://api.neuralwatt.com/v1";
 
-if (!NEURALWATT_API_KEY) {
-	throw new Error("NEURALWATT_API_KEY environment variable is required");
-}
-describe("neuralwatt integration", () => {
+describe.skipIf(!NEURALWATT_API_KEY)("neuralwatt integration", () => {
 	test("qwen3.6-35b-fast returns a non-empty chat completion", async () => {
 		const res = await fetch(`${BASE_URL}/chat/completions`, {
 			method: "POST",
@@ -32,5 +29,5 @@ describe("neuralwatt integration", () => {
 		const content = data.choices[0]?.message?.content;
 		expect(typeof content).toBe("string");
 		expect(content!.length).toBeGreaterThan(0);
-	});
+	}, { timeout: 30000 });
 });
