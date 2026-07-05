@@ -449,36 +449,6 @@ const NEURALWATT_MODELS: ProviderModelConfig[] = [
   },
 ];
 
-// Legacy model ID aliases that map to canonical public models.
-const LEGACY_MODEL_ALIAS_MAP: Record<string, string> = {
-  "glm-5.1": "glm-5.2",
-  "glm-5.1-fast": "glm-5.2-fast",
-  "zai-org/GLM-5.1-FP8": "glm-5.2",
-  "moonshotai/Kimi-K2.5": "kimi-k2.6",
-  "kimi-k2.5-fast": "kimi-k2.6-fast",
-  "moonshotai/Kimi-K2.6": "kimi-k2.6",
-  "Qwen/Qwen3.5-397B-A17B-FP8": "qwen3.5-397b",
-  "Qwen/Qwen3.6-35B-A3B": "qwen3.6-35b",
-};
-
-function resolveLegacyModels(): ProviderModelConfig[] {
-  return Object.entries(LEGACY_MODEL_ALIAS_MAP).map(
-    ([legacyId, canonicalId]) => {
-      const canonical = NEURALWATT_MODELS.find(
-        (model) => model.id === canonicalId,
-      );
-      if (!canonical) {
-        throw new Error(`Missing canonical model for legacy alias ${legacyId}`);
-      }
-      return {
-        ...canonical,
-        id: legacyId,
-        name: `${canonical.name} (legacy ID)`,
-      };
-    },
-  );
-}
-
 // ============================================================================
 // Extension entry point
 // ============================================================================
