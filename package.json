@@ -7,6 +7,10 @@
   "scripts": {
     "test": "bun test"
   },
+  "devDependencies": {
+    "semantic-release": "^25.0.5",
+    "@semantic-release/changelog": "^6.0.3"
+  },
   "keywords": ["omp", "omp-extension", "omp-plugin", "neuralwatt", "ai", "llm"],
   "omp": {
     "extensions": ["./extension.ts"]
