@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/tbui17/omp-neuralwatt-provider/compare/v1.0.0...v1.1.0) (2026-07-05)
+
+
+### Features
+
+* migrate to @oh-my-pi/pi-coding-agent v16 thinking config ([#2](https://github.com/tbui17/omp-neuralwatt-provider/issues/2)) ([481b5b7](https://github.com/tbui17/omp-neuralwatt-provider/commit/481b5b78a1aeb7ecf8b3855ab1d23a49ef1f46bc))
+
 # 1.0.0 (2026-07-05)
 
 

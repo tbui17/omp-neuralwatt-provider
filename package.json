@@ -1,6 +1,6 @@
 {
   "name": "@tbui17/omp-neuralwatt-provider",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Neuralwatt OpenAI-compatible provider for oh-my-pi",
   "type": "module",
   "files": [
