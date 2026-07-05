@@ -5,7 +5,7 @@
  * with GLM, Kimi, and Qwen models.
  */
 
-import type { ExtensionAPI, ProviderConfig } from "@earendil-works/pi-coding-agent";
+import type { ExtensionAPI, ProviderConfig } from "@oh-my-pi/pi-coding-agent";
 import { NEURALWATT_MODELS } from "./src/models";
 
 export default function neuralwattExtension(pi: ExtensionAPI): void {

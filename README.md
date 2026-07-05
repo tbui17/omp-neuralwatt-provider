@@ -59,6 +59,7 @@ $env:NEURALWATT_API_KEY = "sk-..."
 
 ### Smoke test
 
+```
 omp -p --model neuralwatt/glm-5.2 "Say hello."
 ```
 
@@ -116,7 +117,7 @@ omp -p --model neuralwatt/kimi-k2.6 "What's in this screenshot?"
 
 ### Reasoning effort
 
-Reasoning models accept an effort level via `thinkingLevelMap`. Supported levels vary per model but generally include: `off`, `minimal`, `low`, `medium`, `high`, `xhigh`. Lower effort trades reasoning depth for speed and lower energy use. Refer to the model detail page on [portal.neuralwatt.com/models](https://portal.neuralwatt.com/models) for the levels each model honors.
+Reasoning models expose the OpenAI `reasoning_effort` ladder via the v16 `thinking` field, identity-mapped — every level is sent as its own name. Add a `:level` suffix to the model selector to pick one — e.g. `--model neuralwatt/glm-5.2:high`. Lower effort trades reasoning depth for speed and lower energy use. Most reasoning models (GLM-5.2, Kimi K2.6, Kimi K2.7 Code, Qwen3.5) honor the full ladder (`minimal` … `xhigh`); `qwen3.6-35b` is backed by vLLM and only accepts `low`/`medium`/`high`. Refer to the model detail page on [portal.neuralwatt.com/models](https://portal.neuralwatt.com/models) for the levels each model honors.
 
 ## License
 
